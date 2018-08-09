@@ -141,7 +141,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/configs</string>
+	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -187,9 +187,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>225 143 796 473 0 0 1680 1027 </string>
+	<string>251 383 918 498 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>767 1050 1410 1417 767 1050 2560 1417 </string>
+	<string>0 513 1410 514 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1423,7 +1423,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>Working Directory</key>
 			<string>/Users/larajanecka</string>
 		</dict>
@@ -1533,7 +1533,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/larajanecka/configs</string>
+	<string>/Users/larajanecka/.config</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
