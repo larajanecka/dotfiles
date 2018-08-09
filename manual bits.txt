@@ -1,0 +1,7 @@
+add zshenv file: cp ~/.config/zsh/.zshenv ~
+
+copy ~/Library/Application Support/Sublime Text 3/Packages/User/*.sublime-settings
+
+
+
+

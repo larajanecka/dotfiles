@@ -1,0 +1,32 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"Babel",
+		"BracketHighlighter",
+		"Case Conversion",
+		"Diffy",
+		"ESLint-Formatter",
+		"Fix Mac Path",
+		"Git",
+		"GitGutter",
+		"Increment Selection",
+		"JsPrettier",
+		"Maybs Quit",
+		"MultiEditUtils",
+		"Origami",
+		"Package Control",
+		"PackageResourceViewer",
+		"RSpec",
+		"Ruby Slim",
+		"Search in Project",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"Theme - Cyanide"
+	]
+}
