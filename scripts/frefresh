@@ -1,0 +1,5 @@
+#!/bin/bash
+cd ~/flexport
+bundle install
+yarn install
+devbox load_db
