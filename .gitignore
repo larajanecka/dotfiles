@@ -6,3 +6,7 @@ Package Control.cache/*
 Package Control.ca-certs/*
 oscrypto-ca-bundle.crt
 configstore/update-notifier-npm.json
+*.sublime-project
+*.sublime-workspace
+**/.importjs.js
+nvim/plugged

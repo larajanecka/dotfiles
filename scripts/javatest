@@ -1,8 +1,0 @@
-#!/bin/bash
-
-file_path=$1
-without_prefix=${file_path#*"/test/java/"}
-without_suffix=${without_prefix%".java"}
-class_name=${without_suffix//\//"."}
-echo bazel test //catalog:test --test_arg=--include-classname=$class_name --java_header_compilation=false
-bazel test //catalog:test --test_arg=--include-classname=$class_name --java_header_compilation=false

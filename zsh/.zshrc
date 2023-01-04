@@ -55,30 +55,21 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(common-aliases compleat last-working-dir lol sublime sudo wd zsh-nvm, rails, bundle, brew, tmuxinator)
-plugins=(common-aliases last-working-dir wd)
+plugins=(asdf common-aliases last-working-dir wd)
 source $ZSH/oh-my-zsh.sh
 
 alias ls="ls -a"
 alias tmux="tmux -f ${HOME}/.config/.tmux.conf"
 
-alias fstart="work start flexport"
-alias fstop="work stop flexport"
-alias devsync="fx rdev sync --once"
-alias devspec="devsync && fx rdev exec core rspec"
-
-alias prCat="~/flexport/mpr --team=\"catalog-eng\" --label=\"catalog\""
 alias cleangit="git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D"
-alias relay="yarn dump-graphql-schema && yarn run relay"
+
+alias jestDebug="yarn node --inspect node_modules/.bin/jest --runInBand  --runTestsByPath"
+alias jestNoDebug="node_modules/.bin/jest --runTestsByPath"
+alias cliDebug="yarn node --inspect -r ts-node/register src/app/app-cli.runner.ts"
 
 # Linting
-alias dirtygit="git diff --diff-filter=d --name-only $(git merge-base --fork-point origin/master)"
-alias ruby-lint="bundle exec rubocop --force-exclusion --display-cop-names --display-style-guide --config .rubocop.yml --auto-correct"
+alias dirtygit="git diff --diff-filter=d --name-only $(git merge-base --fork-point origin/main)"
 alias js-lint="yarn run prettier --write"
-alias relint-ruby="ruby-lint $(git diff --name-only HEAD HEAD~$1 *.rb *.rake)"
-alias relint-js="js-lint $(git diff --name-only HEAD HEAD~$1 *.js *.jsx)"
-
-alias dbconsole="~/flexport/env-improvement/bin/dbconn"
-alias own_node_mods="sudo chown -R $USER /Users/larajanecka/flexport/open_source/latitude/node_modules; sudo chown -R $USER /Users/larajanecka/flexport/node_modules/"
 
 # Damn typos
 alias got="git"
@@ -86,13 +77,14 @@ alias gut="git"
 alias gir="git"
 alias gitcp="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 
+# Loop aliases
+alias db-ssh="ssh bastion-db-tunnel"
+alias kill-it="yarn prisma dev migrate reset && yarn seed && yarn ctx:dev:corp && yarn dev"
+# Run `kill_port 1234` to quickly kill whatever process is using it.
+kill_port() {
+  lsof -ti:$1 | xargs kill -9
+}
+
 export PATH="$PATH:$HOME/.config/scripts"
 export PATH="$PATH:$HOME/bin"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export PATH="$PATH:$HOME/.rvm/bin"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-# source $(brew --prefix nvm)/nvm.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export YARNHOOK_DRYRUN=true
+export EDITOR=nvim

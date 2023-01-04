@@ -1,6 +1,6 @@
 [user]
 	name = Lara Janecka
-	email = lara@flexport.com
+	email = lara@loop.com
 [alias]
 	st = status -uno
 	stcat = status engines/catalog catalog/
@@ -25,10 +25,12 @@
 	pager =
 	editor = nvim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/larajanecka/.gitignore_global
+	excludesfile = ~/.config/.gitignore
 [color]
 	ui = auto
 [push]
 	default = current
+[pull]
+	rebase=true
 [merge]
 	conflictstyle = diff3
