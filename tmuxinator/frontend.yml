@@ -1,0 +1,12 @@
+# ~/.tmuxinator/frontend.yml
+
+name: frontend
+root: ~/loop/frontend
+
+windows:
+  - main:
+      layout: even-horizontal
+      panes:
+          - yarn relay
+          - yarn dev
+

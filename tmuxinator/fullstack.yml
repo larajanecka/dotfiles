@@ -1,0 +1,23 @@
+# ~/.tmuxinator/fullstack.yml
+
+name: fullstack
+root: ~/loop
+
+windows:
+  - backend:
+      root: ~/loop/backend
+      layout: even-horizontal
+      panes:
+          - yarn docker:up
+          - sleep 1; yarn dev:clean
+  - frontend: 
+      root: ~/loop/frontend
+      layout: even-horizontal
+      panes:
+          - yarn relay
+          - yarn dev:clean
+  - terminal:
+      root: ~/loop
+      layout: even-horizontal
+      panes:
+          - 

@@ -1,0 +1,12 @@
+# ~/.tmuxinator/checkall.yml
+
+name: checkall
+root: ~/loop/backend
+
+windows:
+  - check:
+      layout: even-horizontal
+      panes:
+        - yarn tsc
+        - yarn cli:app:check
+        - yarn style:eslint:check

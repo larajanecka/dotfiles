@@ -1,0 +1,12 @@
+# ~/.tmuxinator/backend.yml
+
+name: backend
+root: ~/loop/backend
+
+windows:
+  - main:
+      layout: even-horizontal
+      panes:
+          - yarn docker:up
+          - sleep 1; yarn dev
+
