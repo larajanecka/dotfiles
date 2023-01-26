@@ -19,7 +19,6 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
 Plug 'VonHeikemen/lsp-zero.nvim'
-Plug 'folke/trouble.nvim'
 
 --Telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -30,7 +29,6 @@ Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
 Plug 'srcery-colors/srcery-vim'
 
 -- Formatter
--- TODO: optionally lsp saga
 Plug 'mhartington/formatter.nvim'
 
 -- Other
@@ -43,14 +41,8 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'mg979/vim-visual-multi'
 
 Plug "tpope/vim-sensible"
-Plug "tpope/vim-abolish"
--- Plug 'stevearc/dressing.nvim'
+Plug 'stevearc/dressing.nvim'
 Plug 'APZelos/blamer.nvim'
-
--- multiple cursors
--- case switching
--- surround
---
 
 
 vim.call('plug#end')
@@ -61,16 +53,11 @@ vim.cmd 'set updatetime=100'
 vim.keymap.set('n', '<leader>sd', '<cmd>NERDTreeFind<cr>', {})
 vim.keymap.set('n', '<leader>fm', '<cmd>FormatWrite<cr>', {})
 vim.keymap.set('n', '<leader>df', '<cmd>GitGutterPreviewHunk<cr>', {})
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
-)
 vim.keymap.set("n", "<leader>bl", "<cmd>BlamerToggle<cr>", {})
 
 vim.keymap.set('n', '<leader>cp', '<cmd>:let @" = expand("%:p")<cr>', {})
 require("Comment").setup()
-require('trouble').setup()
 
 require('telescope-setup')
 require('formatter-setup')
-require('lualine-setup')
 require('lsp-setup')
